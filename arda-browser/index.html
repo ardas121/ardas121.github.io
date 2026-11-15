@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arda Browser — Hızlı, gizli tarayıcı / Fast private browser</title>
+<meta name="description" content="Arda Browser: dahili reklam engelleyici, gömülü Tor, gizli sekmeler ve hava durumu ile hızlı ve gizli Android tarayıcı. / Fast, private Android browser with a built-in ad blocker, built-in Tor and private tabs.">
+<meta name="theme-color" content="#0b0a12">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="canonical" href="https://ardas121.github.io/arda-browser/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ardas121.github.io/arda-browser/">
+<meta property="og:title" content="Arda Browser — Hızlı, gizli ve sana özel">
+<meta property="og:description" content="Reklam ve izleyici engelleyici, gömülü Tor, gizli sekmeler. Hesap yok, verilerin cihazında kalır.">
+<meta property="og:image" content="https://ardas121.github.io/arda-browser/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a12;--line:#ff7a3d33;--gold:#ffb347;--gold2:#fb542b;--text:#f5eef0;--muted:#bfb0b8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.serif{font-family:Cinzel,Georgia,serif;font-weight:900;letter-spacing:.04em;text-transform:uppercase;line-height:1.08}
+.fire{background:linear-gradient(180deg,#fff1c9,#ffc46b 38%,#fb542b 78%,#e8264a);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .3s,box-shadow .3s;padding-top:env(safe-area-inset-top)}
+nav.solid{background:#0b0a12e6;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Cinzel,serif;font-weight:900;letter-spacing:.06em;white-space:nowrap}
+.brand img{width:34px;height:34px;border-radius:9px;border:2px solid var(--gold);background:#fff}
+.lang{display:flex;border:1px solid #ffffff33;border-radius:30px;overflow:hidden;flex:none}
+.lang button{background:none;border:0;color:var(--muted);font:700 13px Montserrat,sans-serif;padding:7px 11px;cursor:pointer}
+.lang button.on{background:var(--gold);color:#1e0c03}
+
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:118px 0 56px;text-align:center}
+.hero::before{content:"";position:absolute;inset:-20%;z-index:-2;
+  background:radial-gradient(40% 35% at 50% 30%,#fb542b55,#0000 70%),radial-gradient(30% 30% at 20% 70%,#e8264a33,#0000 70%),radial-gradient(35% 30% at 85% 60%,#ffb34730,#0000 70%);
+  animation:glow 9s ease-in-out infinite alternate}
+@keyframes glow{to{transform:translateY(-4%) scale(1.06)}}
+.embers{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(2px 2px at 20% 80%,#ffb347 50%,#0000),radial-gradient(3px 3px at 70% 90%,#fb542bcc 50%,#0000),radial-gradient(2px 2px at 40% 95%,#ffd27aaa 50%,#0000),radial-gradient(2px 2px at 85% 85%,#ff7a3d 50%,#0000),radial-gradient(2px 2px at 10% 92%,#ffb347aa 50%,#0000),radial-gradient(3px 3px at 55% 88%,#ff3d5a99 50%,#0000);
+  background-size:300px 340px;animation:rise 12s linear infinite;opacity:.8}
+@keyframes rise{to{background-position:40px -340px,-30px -340px,20px -340px,-50px -340px,30px -340px,-20px -340px}}
+.logo-big{width:120px;height:120px;margin:0 auto 22px;border-radius:32px;background:#fff;padding:14px;box-shadow:0 0 0 3px var(--gold),0 18px 60px #fb542b66;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.logo-big img{width:100%;height:100%;object-fit:contain}
+.title{font-size:clamp(36px,8vw,70px);filter:drop-shadow(0 4px 0 #3a0d00) drop-shadow(0 10px 26px #000c)}
+.sub{font-size:clamp(16px,2.2vw,20px);font-weight:600;color:#e8dade;margin:12px auto 0;max-width:620px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#ffffff0f;border:1px solid var(--line);font-weight:700;font-size:14px;backdrop-filter:blur(6px)}
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:16px;padding:13px 22px;font:800 15px Montserrat,sans-serif;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:24px;height:24px;flex:none}
+.btn-play{background:#000;color:#fff;border:1px solid #ffffff55;box-shadow:0 8px 24px #0009;text-align:left;line-height:1.15}
+.btn-play small{display:block;font-size:11px;font-weight:600;color:#d8cfd3;letter-spacing:.04em;text-transform:uppercase}
+.btn-play b{font-size:18px}
+.btn-fire{background:linear-gradient(180deg,#ffc46b,#fb542b);color:#2a0b02;box-shadow:0 8px 28px #fb542b66}
+
+.sec{padding:34px 0}
+.sec h2.h{font-size:clamp(24px,4.4vw,36px);text-align:center;margin-bottom:6px}
+.sec p.lead{text-align:center;color:var(--muted);font-weight:600;margin-bottom:22px}
+.shots{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#fb542b55 transparent}
+.shots img{flex:none;width:min(62vw,230px);aspect-ratio:9/16;object-fit:cover;border-radius:20px;border:1px solid var(--line);box-shadow:0 14px 40px #000a;scroll-snap-align:center}
+@media(min-width:1000px){.shots{justify-content:center;overflow:visible}.shots img{width:190px}}
+
+.grid{display:grid;gap:16px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{position:relative;background:linear-gradient(180deg,#1b1424,#130f1b);border:1px solid var(--line);border-radius:22px;padding:22px 20px 20px;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.card.in{opacity:1;transform:none}
+.card::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,#ffb347,#fb542b,#e8264a)}
+.card h3{display:flex;align-items:center;gap:12px;font-family:Cinzel,serif;font-weight:900;font-size:17px;letter-spacing:.03em;margin-bottom:8px}
+.card h3 .ic{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#fb542b22;border:1px solid #fb542b55;font-size:20px}
+.card p{color:#e9dfe3;font-size:15px}
+
+.prem{display:grid;gap:20px;align-items:center;background:radial-gradient(80% 120% at 0% 0%,#ffb34726,#0000 60%),linear-gradient(180deg,#221726,#140f1b);border:1px solid #ffb34766;border-radius:26px;padding:26px 22px;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.prem.in{opacity:1;transform:none}
+@media(min-width:820px){.prem{grid-template-columns:1.3fr 1fr;padding:34px}}
+.prem h2{font-size:clamp(24px,4vw,34px)}
+.prem ul{list-style:none;display:grid;gap:9px;margin-top:14px}
+.prem li{position:relative;padding-left:22px;color:#efe4e8}
+.prem li::before{content:"";position:absolute;left:2px;top:.6em;width:9px;height:9px;border-radius:50%;background:linear-gradient(180deg,#ffd27a,#fb542b);box-shadow:0 0 8px #fb542b}
+.prem .note{margin-top:14px;color:var(--muted);font-size:14px}
+.prem .crown{display:none;place-items:center;font-size:110px;line-height:1;filter:drop-shadow(0 12px 40px #fb542b88);animation:float 5s ease-in-out infinite}
+@media(min-width:820px){.prem .crown{display:grid}}
+
+.contact{text-align:center}
+.mail{color:var(--gold);font-weight:800;text-decoration:none;border-bottom:1px dashed var(--gold);word-break:break-all}
+footer{border-top:1px solid var(--line);padding:26px 0 calc(26px + env(safe-area-inset-bottom));text-align:center;color:var(--muted);font-size:13px}
+footer a{color:var(--gold);text-decoration:none}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-bottom:10px;font-weight:700}
+
+[data-lang]{display:none}
+html[lang="tr"] [data-lang="tr"],html[lang="en"] [data-lang="en"]{display:revert}
+html[lang="tr"] [data-lang="en"],html[lang="en"] [data-lang="tr"]{display:none!important}
+html[lang="tr"] .shots[data-lang="tr"],html[lang="en"] .shots[data-lang="en"]{display:flex}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card,.prem{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a class="brand" href="#top"><img src="icon.png" alt=""><span>ARDA BROWSER</span></a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="en">EN</button><button type="button" data-set="tr">TR</button>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="embers"></div>
+  <div class="wrap">
+    <div class="logo-big"><img src="icon.png" alt="Arda Browser"></div>
+    <h1 class="serif title fire">Arda Browser</h1>
+    <p class="sub">
+      <span data-lang="tr">Hızlı, gizli ve sana özel Android tarayıcı. Reklamları ve izleyicileri sayfa açılmadan engeller, hesap istemez, verilerin cihazında kalır.</span>
+      <span data-lang="en">A fast, private Android browser made for you. It blocks ads and trackers before the page loads, needs no account, and keeps your data on your device.</span>
+    </p>
+    <div class="chips">
+      <span class="chip">🛡️ <span data-lang="tr">Reklam engelleyici</span><span data-lang="en">Ad blocker</span></span>
+      <span class="chip">🧅 <span data-lang="tr">Gömülü Tor</span><span data-lang="en">Built-in Tor</span></span>
+      <span class="chip">🚫 <span data-lang="tr">Hesap yok</span><span data-lang="en">No account</span></span>
+      <span class="chip">🌍 <span data-lang="tr">17 dil</span><span data-lang="en">17 languages</span></span>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.ardabrowser.app" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#ffce00" d="m17 8.4-3.6 3.6L17 15.6l3.7-2.1c.8-.5.8-1.6 0-2.1L17 8.4z"/><path fill="#ff3a44" d="M13.4 12 3.6 22.2c.4.2.9.2 1.4-.1L17 15.6 13.4 12z"/><path fill="#00f076" d="M13.4 12 17 8.4 5 1.9c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>
+        <span><small data-lang="tr">Ücretsiz indir</small><small data-lang="en">Get it free on</small><b>Google Play</b></span>
+      </a>
+      <a class="btn btn-fire" href="#features"><span data-lang="tr">Özellikler</span><span data-lang="en">Features</span> ↓</a>
+    </div>
+  </div>
+</header>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="shots" data-lang="tr">
+      <img src="shots/tr-1.webp" alt="Yeni sekme: canlı saat ve gizlilik raporu" loading="lazy" width="540" height="960">
+      <img src="shots/tr-2.webp" alt="Arda Browser ekran görüntüsü 2" loading="lazy" width="540" height="960">
+      <img src="shots/tr-3.webp" alt="Arda Browser ekran görüntüsü 3" loading="lazy" width="540" height="960">
+      <img src="shots/tr-4.webp" alt="Arda Browser ekran görüntüsü 4" loading="lazy" width="540" height="960">
+      <img src="shots/tr-5.webp" alt="Arda Browser ekran görüntüsü 5" loading="lazy" width="540" height="960">
+    </div>
+    <div class="shots" data-lang="en">
+      <img src="shots/en-1.webp" alt="New tab: live clock and privacy report" loading="lazy" width="540" height="960">
+      <img src="shots/en-2.webp" alt="Arda Browser screenshot 2" loading="lazy" width="540" height="960">
+      <img src="shots/en-3.webp" alt="Arda Browser screenshot 3" loading="lazy" width="540" height="960">
+      <img src="shots/en-4.webp" alt="Arda Browser screenshot 4" loading="lazy" width="540" height="960">
+      <img src="shots/en-5.webp" alt="Arda Browser screenshot 5" loading="lazy" width="540" height="960">
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="features">
+  <div class="wrap">
+    <h2 class="serif h fire"><span data-lang="tr">Neler var?</span><span data-lang="en">What's inside</span></h2>
+    <p class="lead"><span data-lang="tr">Ek uygulama ya da eklenti gerekmez, hepsi tarayıcının içinde.</span><span data-lang="en">No extra apps or extensions: it's all built in.</span></p>
+    <div class="grid">
+      <article class="card"><h3><span class="ic">🛡️</span><span data-lang="tr">Kalkanlar</span><span data-lang="en">Shields</span></h3>
+        <p data-lang="tr">Reklamları, açılır pencereleri, izleyicileri ve çerez pencerelerini engeller. Bağlantıları HTTPS'e yükseltir.</p>
+        <p data-lang="en">Blocks ads, pop-ups, trackers and cookie banners, and upgrades connections to HTTPS.</p></article>
+      <article class="card"><h3><span class="ic">📊</span><span data-lang="tr">Gizlilik raporu</span><span data-lang="en">Privacy report</span></h3>
+        <p data-lang="tr">Bu ay kaç reklam ve izleyicinin engellendiğini, ne kadar veri ve zaman kazandığını gör.</p>
+        <p data-lang="en">See how many ads and trackers were blocked this month and how much data and time you saved.</p></article>
+      <article class="card"><h3><span class="ic">🔒</span><span data-lang="tr">Gizli sekmeler</span><span data-lang="en">Private tabs</span></h3>
+        <p data-lang="tr">Geçmiş ve çerez kaydedilmez. Gizli sekme kilidi ve uygulama kilidi parmak izi ister.</p>
+        <p data-lang="en">No history or cookies saved. Private tab lock and app lock ask for your fingerprint.</p></article>
+      <article class="card"><h3><span class="ic">🧅</span><span data-lang="tr">Gömülü Tor</span><span data-lang="en">Built-in Tor</span></h3>
+        <p data-lang="tr">Tor ağı uygulamanın içinde. Orbot gibi başka bir uygulama kurman gerekmez (Premium).</p>
+        <p data-lang="en">The Tor network runs inside the app. No need to install Orbot or any other app (Premium).</p></article>
+      <article class="card"><h3><span class="ic">⛅</span><span data-lang="tr">Hava durumu ve döviz</span><span data-lang="en">Weather and rates</span></h3>
+        <p data-lang="tr">Yeni sekmede canlı saat, hava durumu, döviz kartları ve haberler.</p>
+        <p data-lang="en">Live clock, weather, exchange rates and news right on your new tab page.</p></article>
+      <article class="card"><h3><span class="ic">🎯</span><span data-lang="tr">Odak modu ve !bang</span><span data-lang="en">Focus mode and !bangs</span></h3>
+        <p data-lang="tr">Dikkat dağıtan siteleri bir süre kapat. <b>!yt</b>, <b>!w</b>, <b>!gh</b> gibi kısayollarla doğrudan ara.</p>
+        <p data-lang="en">Pause distracting sites for a while. Search directly with shortcuts like <b>!yt</b>, <b>!w</b> and <b>!gh</b>.</p></article>
+      <article class="card"><h3><span class="ic">🎬</span><span data-lang="tr">Video ve müzik</span><span data-lang="en">Video and music</span></h3>
+        <p data-lang="tr">Ekran kapalıyken arka planda oynatma ve resim içinde resim (PiP).</p>
+        <p data-lang="en">Background play with the screen off, and picture-in-picture.</p></article>
+      <article class="card"><h3><span class="ic">🧰</span><span data-lang="tr">Kullanışlı araçlar</span><span data-lang="en">Handy tools</span></h3>
+        <p data-lang="tr">Okuma modu, sayfa çevirisi, QR tarayıcı, tam sayfa ekran görüntüsü, PDF, sekme grupları.</p>
+        <p data-lang="en">Reader mode, page translation, QR scanner, full-page screenshots, PDF and tab groups.</p></article>
+      <article class="card"><h3><span class="ic">🎨</span><span data-lang="tr">Sana özel</span><span data-lang="en">Make it yours</span></h3>
+        <p data-lang="tr">Renk stilleri, hareketli manzaralar, alt veya üst adres çubuğu. İnternet yokken oyun bile var.</p>
+        <p data-lang="en">Color styles, animated landscapes, top or bottom address bar. There's even a game for when you're offline.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="prem">
+      <div>
+        <h2 class="serif fire">Arda Premium</h2>
+        <p data-lang="tr" style="margin-top:8px;color:#efe4e8">Tek seferlik satın alma, abonelik yok. Ücretsiz özelliklerin hiçbiri kilitlenmez.</p>
+        <p data-lang="en" style="margin-top:8px;color:#efe4e8">A one-time purchase, no subscription. None of the free features are locked.</p>
+        <ul data-lang="tr">
+          <li>Tor ile gizli gezinme</li>
+          <li>Özel Premium renk stilleri ve kendi rengini seçme</li>
+          <li>Premium rozeti</li>
+          <li>3 gün ücretsiz dene</li>
+        </ul>
+        <ul data-lang="en">
+          <li>Private browsing over Tor</li>
+          <li>Exclusive Premium color styles and your own color</li>
+          <li>Premium badge</li>
+          <li>Try it free for 3 days</li>
+        </ul>
+      </div>
+      <div class="crown" aria-hidden="true">👑</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <h2 class="serif h fire"><span data-lang="tr">Destek</span><span data-lang="en">Support</span></h2>
+    <p class="lead" style="margin-bottom:10px"><span data-lang="tr">Soru, sorun veya öneri için yaz:</span><span data-lang="en">Questions, problems or ideas? Write to us:</span></p>
+    <p><a class="mail" href="mailto:ardabrowser.support@gmail.com">ardabrowser.support@gmail.com</a></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="links">
+    <a href="privacy.html"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span></a>
+    <a href="https://play.google.com/store/apps/details?id=com.ardabrowser.app">Google Play</a>
+    <a href="../apps/"><span data-lang="tr">Diğer uygulamalar</span><span data-lang="en">More apps</span></a>
+  </div>
+  © 2026 Arda Browser
+</div></footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  function set(l) {
+    root.lang = l;
+    document.title = l === "tr" ? "Arda Browser — Hızlı, gizli tarayıcı" : "Arda Browser — Fast private browser";
+    document.querySelectorAll(".lang button").forEach(function (b) { b.classList.toggle("on", b.dataset.set === l); });
+    try { localStorage.setItem("ab-lang", l); } catch (e) {}
+    reveal();
+  }
+  var q = new URLSearchParams(location.search).get("lang");
+  var saved = null; try { saved = localStorage.getItem("ab-lang"); } catch (e) {}
+  document.querySelectorAll(".lang button").forEach(function (b) { b.onclick = function () { set(b.dataset.set); }; });
+  var nav = document.getElementById("nav");
+  function onScroll() { nav.classList.toggle("solid", scrollY > 30); }
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .08 }) : null;
+  function reveal() {
+    document.querySelectorAll(".card:not(.in),.prem:not(.in)").forEach(function (c, i) {
+      if (!c.offsetParent) return;
+      c.style.transitionDelay = Math.min(i, 6) * 0.06 + "s";
+      if (io) io.observe(c); else c.classList.add("in");
+    });
+  }
+  set(q === "en" || q === "tr" ? q : saved || ((navigator.language || "tr").slice(0, 2) === "tr" ? "tr" : "en"));
+})();
+</script>
+</body>
+</html>
