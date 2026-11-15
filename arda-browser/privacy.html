@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arda Browser — Gizlilik Politikası / Privacy Policy</title>
+<meta name="description" content="Arda Browser gizlilik politikası: hesap yok, analitik yok, reklam takibi yok. Verileriniz cihazınızda kalır. / Arda Browser privacy policy: no account, no analytics, no ad tracking.">
+<meta name="theme-color" content="#0b0a12">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ardas121.github.io/arda-browser/privacy.html">
+<meta property="og:title" content="Arda Browser — Gizlilik Politikası">
+<meta property="og:description" content="Hesap yok, analitik yok, reklam takibi yok. Verileriniz cihazınızda kalır.">
+<meta property="og:image" content="https://ardas121.github.io/arda-browser/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0a12;--bg2:#141020;--panel:#17121f;--line:#ff7a3d33;--gold:#ffb347;--gold2:#fb542b;--ember:#ff3d5a;--text:#f5eef0;--muted:#bfb0b8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.serif{font-family:Cinzel,Georgia,serif;font-weight:900;letter-spacing:.04em;text-transform:uppercase;line-height:1.08}
+.fire{background:linear-gradient(180deg,#fff1c9,#ffc46b 38%,#fb542b 78%,#e8264a);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .3s,box-shadow .3s;padding-top:env(safe-area-inset-top)}
+nav.solid{background:#0b0a12e6;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Cinzel,serif;font-weight:900;letter-spacing:.06em}
+.brand img{width:34px;height:34px;border-radius:9px;border:2px solid var(--gold);background:#fff}
+.lang{display:flex;border:1px solid #ffffff33;border-radius:30px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--muted);font:700 13px Montserrat,sans-serif;padding:7px 11px;cursor:pointer}
+.lang button.on{background:var(--gold);color:#1e0c03}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;padding:120px 0 64px;text-align:center}
+.hero::before{content:"";position:absolute;inset:-20%;z-index:-2;
+  background:radial-gradient(40% 35% at 50% 30%,#fb542b55,#0000 70%),radial-gradient(30% 30% at 20% 70%,#e8264a33,#0000 70%),radial-gradient(35% 30% at 85% 60%,#ffb34730,#0000 70%);
+  animation:glow 9s ease-in-out infinite alternate}
+@keyframes glow{to{transform:translateY(-4%) scale(1.06)}}
+.embers{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:radial-gradient(2px 2px at 20% 80%,#ffb347 50%,#0000),radial-gradient(3px 3px at 70% 90%,#fb542bcc 50%,#0000),radial-gradient(2px 2px at 40% 95%,#ffd27aaa 50%,#0000),radial-gradient(2px 2px at 85% 85%,#ff7a3d 50%,#0000),radial-gradient(2px 2px at 10% 92%,#ffb347aa 50%,#0000),radial-gradient(3px 3px at 55% 88%,#ff3d5a99 50%,#0000);
+  background-size:300px 340px;animation:rise 12s linear infinite;opacity:.8}
+@keyframes rise{to{background-position:40px -340px,-30px -340px,20px -340px,-50px -340px,30px -340px,-20px -340px}}
+.logo-big{width:112px;height:112px;margin:0 auto 22px;border-radius:30px;background:#fff;padding:14px;box-shadow:0 0 0 3px var(--gold),0 18px 60px #fb542b66;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.logo-big img{width:100%;height:100%;object-fit:contain}
+.title{font-size:clamp(32px,7vw,62px);filter:drop-shadow(0 4px 0 #3a0d00) drop-shadow(0 10px 26px #000c)}
+.sub{font-size:clamp(15px,2vw,18px);font-weight:600;color:#e8dade;margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#ffffff0f;border:1px solid var(--line);font-weight:700;font-size:14px;backdrop-filter:blur(6px)}
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:16px;padding:13px 22px;font:800 15px Montserrat,sans-serif;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-play{background:#000;color:#fff;border:1px solid #ffffff55;box-shadow:0 8px 24px #0009}
+.btn-play small{display:block;font-size:11px;font-weight:600;color:#d8cfd3;letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
+.btn-fire{background:linear-gradient(180deg,#ffc46b,#fb542b);color:#2a0b02;box-shadow:0 8px 28px #fb542b66}
+
+/* ---------- content ---------- */
+main{padding:10px 0 70px}
+.grid{display:grid;gap:16px}
+@media(min-width:820px){.grid{grid-template-columns:1fr 1fr}.wide{grid-column:1/-1}}
+.card{position:relative;background:linear-gradient(180deg,#1b1424,#130f1b);border:1px solid var(--line);border-radius:22px;padding:22px 22px 20px;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.card.in{opacity:1;transform:none}
+.card::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,#ffb347,#fb542b,#e8264a)}
+.card h2{display:flex;align-items:center;gap:12px;font-family:Cinzel,serif;font-weight:900;font-size:19px;letter-spacing:.03em;margin-bottom:10px}
+.card h2 .ic{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#fb542b22;border:1px solid #fb542b55;font-size:20px}
+.card p,.card li{color:#e9dfe3;font-size:15px}
+.card p+p{margin-top:8px}
+.card ul{list-style:none;display:grid;gap:8px;margin-top:6px}
+.card li{position:relative;padding-left:20px}
+.card li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:linear-gradient(180deg,#ffb347,#fb542b);box-shadow:0 0 8px #fb542b}
+.card b{color:#fff}
+.mail{color:var(--gold);font-weight:800;text-decoration:none;border-bottom:1px dashed var(--gold)}
+footer{border-top:1px solid var(--line);padding:26px 0 calc(26px + env(safe-area-inset-bottom));text-align:center;color:var(--muted);font-size:13px}
+footer a{color:var(--gold);text-decoration:none}
+[data-lang]{display:none}
+html[lang="tr"] [data-lang="tr"],html[lang="en"] [data-lang="en"]{display:revert}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a class="brand" href="#top"><img src="icon.png" alt=""><span>ARDA BROWSER</span></a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set="en">EN</button><button type="button" data-set="tr">TR</button>
+  </div>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="embers"></div>
+  <div class="wrap">
+    <div class="logo-big"><img src="icon.png" alt="Arda Browser"></div>
+    <h1 class="serif title fire"><span data-lang="tr">Gizlilik Politikası</span><span data-lang="en">Privacy Policy</span></h1>
+    <p class="sub"><span data-lang="tr">Son güncelleme: 15 Kasım 2026 · Arda Browser</span><span data-lang="en">Last updated: November 15, 2026 · Arda Browser</span></p>
+    <div class="chips">
+      <span class="chip">🚫 <span data-lang="tr">Hesap yok</span><span data-lang="en">No account</span></span>
+      <span class="chip">📊 <span data-lang="tr">Analitik yok</span><span data-lang="en">No analytics</span></span>
+      <span class="chip">🎯 <span data-lang="tr">Reklam takibi yok</span><span data-lang="en">No ad tracking</span></span>
+      <span class="chip">📱 <span data-lang="tr">Veriler cihazında</span><span data-lang="en">Data stays on your device</span></span>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.ardabrowser.app" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#ffce00" d="m17 8.4-3.6 3.6L17 15.6l3.7-2.1c.8-.5.8-1.6 0-2.1L17 8.4z"/><path fill="#ff3a44" d="M13.4 12 3.6 22.2c.4.2.9.2 1.4-.1L17 15.6 13.4 12z"/><path fill="#00f076" d="M13.4 12 17 8.4 5 1.9c-.5-.3-1-.3-1.4-.1L13.4 12z"/></svg>
+        <span><small data-lang="tr">Şimdi indir</small><small data-lang="en">Get it on</small>Google Play</span>
+      </a>
+      <a class="btn btn-fire" href="mailto:e131326269@gmail.com">✉️ <span data-lang="tr">İletişim</span><span data-lang="en">Contact</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<!-- ======================= TÜRKÇE ======================= -->
+<div class="grid" data-lang="tr">
+  <section class="card wide"><h2><span class="ic">🛡️</span>Kısaca</h2>
+    <p>Arda Browser, gizliliğinize önem veren bir web tarayıcısıdır. Uygulamanın <b>kendi sunucusu yoktur</b>. Sizden hesap istemez, kişisel verinizi bize göndermez, kullanım analitiği, reklam kimliği veya reklam takibi kullanmaz. Bu sayfa, uygulamanın hangi verileri işlediğini ve nereye gönderdiğini açıklar.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">📱</span>Cihazınızda kalan veriler</h2>
+    <ul>
+      <li>Gezinti geçmişi, yer imleri, açık ve sabitlenmiş sekmeler, okuma listesi ve ayarlar</li>
+      <li>İndirme kayıtları</li>
+      <li>Kaydettiğiniz kullanıcı adı ve şifreler (cihazda şifreli saklanır, dışarı gönderilmez)</li>
+      <li>Çerezler ve site verileri (gizli sekmeler kapanınca silinir)</li>
+      <li>Hava durumu için seçtiğiniz şehir veya yaklaşık konum (~1 km)</li>
+      <li>Arda Premium satın alma ve ücretsiz deneme durumu</li>
+    </ul>
+    <p>Hepsini Ayarlar &gt; Tarama verilerini temizle bölümünden silebilirsiniz. "Çıkarken verileri temizle" açıksa geçmiş, çerezler ve önbellek otomatik silinir.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🌐</span>Üçüncü taraf hizmetler</h2>
+    <p>Bazı özellikler internetteki hizmetlere istek gönderir. Bu isteklere kimliğiniz veya hesabınız eklenmez.</p>
+    <ul>
+      <li><b>Siteler ve arama motorları:</b> Ziyaret ettiğiniz siteler ve seçtiğiniz arama motoru normal web trafiği alır. Arama önerileri açıksa yazdıklarınız DuckDuckGo'ya gider (gizli sekmede kapalı).</li>
+      <li><b>Yeni sekme haberleri:</b> Bing Haberler RSS akışları.</li>
+      <li><b>Hava durumu:</b> Şehir adı veya yaklaşık konum (~1 km) Open-Meteo'ya gönderilir. Şehir adını bulmak için Android'in konum adı servisi kullanılabilir (Tor açıkken kullanılmaz).</li>
+      <li><b>Döviz kurları:</b> Frankfurter (Avrupa Merkez Bankası kurları).</li>
+      <li><b>Filtre listeleri:</b> EasyList ve EasyPrivacy (easylist.to).</li>
+      <li><b>Sayfa çevirisi:</b> Google Çeviri (translate.goog). <b>Google Lens:</b> seçtiğiniz resmin adresi Google'a gider.</li>
+      <li><b>QR tarayıcı:</b> Google Play hizmetleri; uygulamaya yalnızca QR içeriği gelir. <b>Sesli arama:</b> cihazınızın konuşma tanıma hizmeti. <b>Sesli okuma:</b> cihazdaki metin okuma motoru.</li>
+      <li><b>Duck.ai:</b> Yazdığınız istemler DuckDuckGo'nun Duck.ai hizmetine gider.</li>
+    </ul>
+  </section>
+
+  <section class="card"><h2><span class="ic">🧅</span>Tor ile gizli gezinme</h2>
+    <p>Arda Premium ile açtığınızda uygulama, içine gömülü Tor yazılımıyla web trafiğinizi gönüllülerin işlettiği <b>Tor ağı</b> üzerinden yönlendirir. Böylece ziyaret ettiğiniz siteler gerçek IP adresinizi görmez. Tor açıkken yeni sekme haberleri de Tor üzerinden alınır. Ayrı bir uygulama gerekmez.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">👑</span>Satın almalar (Arda Premium)</h2>
+    <p>Arda Premium tek seferlik bir satın almadır ve ödeme tamamen <b>Google Play</b> tarafından işlenir. Kart veya ödeme bilgileriniz bize ulaşmaz. Uygulama, Premium'un etkin olup olmadığını Google Play Faturalandırma'ya sorar ve sonucu cihazda saklar. 3 günlük ücretsiz deneme yalnızca cihazınızda tutulur.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🚫</span>Reklam ve izleyici engelleme</h2>
+    <p>Uygulama reklam ve izleyicileri engeller, bağlantıları mümkünse HTTPS'e yükseltir, çerez açılır pencerelerini reddedebilir ve Global Privacy Control sinyali gönderir. Bunların hepsi cihazda yapılır.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🔑</span>İzinler</h2>
+    <ul>
+      <li><b>İnternet / ağ durumu:</b> Web sayfalarını yüklemek için.</li>
+      <li><b>Bildirimler:</b> İndirmeler, açık gizli sekmeler, dakika sayacı ve isteğe bağlı ipuçları.</li>
+      <li><b>Yaklaşık konum (isteğe bağlı):</b> Yalnızca hava durumunda "Konumumu kullan"a dokununca istenir. Arka planda kullanılmaz, hassas konum istenmez.</li>
+      <li><b>Faturalandırma:</b> Google Play üzerinden Premium satın alımı.</li>
+      <li><b>Depolama (eski Android):</b> İndirmeleri kaydetmek için.</li>
+      <li><b>Parmak izi / ekran kilidi:</b> Android'in kendi kilit ekranı kullanılır; bilgileriniz uygulamaya ulaşmaz.</li>
+      <li><b>Siteler için kamera, mikrofon, konum:</b> Yalnızca site isterse ve siz onaylarsanız.</li>
+    </ul>
+  </section>
+
+  <section class="card"><h2><span class="ic">🧒</span>Çocukların gizliliği</h2>
+    <p>Uygulama 13 yaşın altındaki çocuklara özel olarak yönelik değildir ve bilerek onlardan veri toplamaz.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🗑️</span>Güvenlik ve silme</h2>
+    <p>Verileriniz cihazınızda tutulur; uygulamayı kaldırdığınızda veya tarama verilerini sildiğinizde silinir. Sunucularımızda hakkınızda saklanan veri yoktur.</p>
+  </section>
+
+  <section class="card wide"><h2><span class="ic">✉️</span>Değişiklikler ve iletişim</h2>
+    <p>Bu politika güncellenebilir; güncel sürüm her zaman bu adreste yayımlanır. Sorularınız için: <a class="mail" href="mailto:e131326269@gmail.com">e131326269@gmail.com</a></p>
+  </section>
+</div>
+
+<!-- ======================= ENGLISH ======================= -->
+<div class="grid" data-lang="en">
+  <section class="card wide"><h2><span class="ic">🛡️</span>In short</h2>
+    <p>Arda Browser is a privacy-focused web browser. It has <b>no servers of its own</b>. It does not require an account, does not send your personal data to us, and does not use analytics, advertising IDs or ad tracking. This page explains what data the App handles and where it is sent.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">📱</span>Data that stays on your device</h2>
+    <ul>
+      <li>Browsing history, bookmarks, open and pinned tabs, reading list and settings</li>
+      <li>Download records</li>
+      <li>Usernames and passwords you choose to save (encrypted on the device, never sent out)</li>
+      <li>Cookies and site data (private tabs are cleared when closed)</li>
+      <li>The city or approximate location you choose for the weather card (~1 km)</li>
+      <li>Your Arda Premium purchase and free-trial status</li>
+    </ul>
+    <p>You can delete all of it in Settings &gt; Clear browsing data. If "Clear data on exit" is on, history, cookies and cache are deleted automatically.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🌐</span>Third-party services</h2>
+    <p>Some features send requests to online services. These requests never include your identity or an account.</p>
+    <ul>
+      <li><b>Websites and search engines:</b> sites you visit and your chosen search engine receive normal web traffic. If search suggestions are on, what you type goes to DuckDuckGo (off in private tabs).</li>
+      <li><b>New tab news:</b> Bing News RSS feeds.</li>
+      <li><b>Weather:</b> the city name or your approximate location (~1 km) is sent to Open-Meteo. Android's geocoding service may turn it into a city name (not while Tor is on).</li>
+      <li><b>Exchange rates:</b> Frankfurter (European Central Bank rates).</li>
+      <li><b>Filter lists:</b> EasyList and EasyPrivacy (easylist.to).</li>
+      <li><b>Page translation:</b> Google Translate (translate.goog). <b>Google Lens:</b> the image address you choose is sent to Google.</li>
+      <li><b>QR scanner:</b> Google Play services; only the QR content reaches the App. <b>Voice search:</b> your device's speech recognition service. <b>Read aloud:</b> on-device text-to-speech.</li>
+      <li><b>Duck.ai:</b> prompts you type are sent to DuckDuckGo's Duck.ai.</li>
+    </ul>
+  </section>
+
+  <section class="card"><h2><span class="ic">🧅</span>Private browsing with Tor</h2>
+    <p>With Arda Premium, the App's built-in Tor software routes your web traffic through the volunteer-run <b>Tor network</b>, so the sites you visit do not see your real IP address. While Tor is on, the new tab news is also loaded through Tor. No extra app is needed.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">👑</span>Purchases (Arda Premium)</h2>
+    <p>Arda Premium is a one-time purchase processed entirely by <b>Google Play</b>. Your card or payment details never reach us. The App asks Google Play Billing whether Premium is active and stores the result on the device. The 3-day free trial is kept only on your device.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🚫</span>Ad and tracker blocking</h2>
+    <p>The App blocks ads and trackers, upgrades connections to HTTPS when possible, can reject cookie pop-ups and sends the Global Privacy Control signal, all on the device.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🔑</span>Permissions</h2>
+    <ul>
+      <li><b>Internet / network state:</b> to load web pages.</li>
+      <li><b>Notifications:</b> downloads, open private tabs, the minute timer and optional tips.</li>
+      <li><b>Approximate location (optional):</b> requested only when you tap "Use my location" on the weather card. Never used in the background; precise location is not requested.</li>
+      <li><b>Billing:</b> to buy Premium through Google Play.</li>
+      <li><b>Storage (older Android):</b> to save downloads.</li>
+      <li><b>Fingerprint / screen lock:</b> Android's own lock screen is used; your data never reaches the App.</li>
+      <li><b>Camera, microphone, location for websites:</b> only when a site asks and you approve.</li>
+    </ul>
+  </section>
+
+  <section class="card"><h2><span class="ic">🧒</span>Children</h2>
+    <p>The App is not directed to children under 13 and does not knowingly collect their data.</p>
+  </section>
+
+  <section class="card"><h2><span class="ic">🗑️</span>Security and deletion</h2>
+    <p>Your data stays on your device and is removed when you uninstall the App or clear browsing data. We store no data about you on any server.</p>
+  </section>
+
+  <section class="card wide"><h2><span class="ic">✉️</span>Changes and contact</h2>
+    <p>This policy may be updated; the current version is always published at this address. Questions: <a class="mail" href="mailto:e131326269@gmail.com">e131326269@gmail.com</a></p>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap">© 2026 Arda Browser · <a href="https://play.google.com/store/apps/details?id=com.ardabrowser.app">Google Play</a></div></footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  function set(l) {
+    root.lang = l;
+    document.title = l === "tr" ? "Arda Browser — Gizlilik Politikası" : "Arda Browser — Privacy Policy";
+    document.querySelectorAll(".lang button").forEach(function (b) { b.classList.toggle("on", b.dataset.set === l); });
+    try { localStorage.setItem("ab-lang", l); } catch (e) {}
+    reveal();
+  }
+  var q = new URLSearchParams(location.search).get("lang");
+  var saved = null; try { saved = localStorage.getItem("ab-lang"); } catch (e) {}
+  set(q === "en" || q === "tr" ? q : saved || ((navigator.language || "tr").slice(0, 2) === "tr" ? "tr" : "en"));
+  document.querySelectorAll(".lang button").forEach(function (b) { b.onclick = function () { set(b.dataset.set); }; });
+  var nav = document.getElementById("nav");
+  function onScroll() { nav.classList.toggle("solid", scrollY > 30); }
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .08 }) : null;
+  function reveal() {
+    document.querySelectorAll(".card:not(.in)").forEach(function (c, i) {
+      if (!c.offsetParent) return;
+      c.style.transitionDelay = Math.min(i, 6) * 0.06 + "s";
+      if (io) io.observe(c); else c.classList.add("in");
+    });
+  }
+})();
+</script>
+</body>
+</html>
