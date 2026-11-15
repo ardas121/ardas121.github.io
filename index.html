@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ardas121.github.io/">
 <meta property="og:title" content="Frostfall: Last Fire">
-<meta property="og:description" content="The world is frozen. One fire still burns. A free multiplayer survival strategy game — coming soon on Google Play.">
+<meta property="og:description" content="The world is frozen. One fire still burns. A free multiplayer survival strategy game — now on Google Play.">
 <meta property="og:image" content="https://ardas121.github.io/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -236,7 +236,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <img class="icon rv" src="icon-192.png" alt="">
     <h2 class="serif gold rv" data-i="h5">Will you keep the fire alive?</h2>
-    <p class="sub rv" data-i="s5">Follow us on Instagram to be the first to know when Frostfall launches.</p>
+    <p class="sub rv" data-i="s5">Download Frostfall free on Google Play and follow us on Instagram for news and events.</p>
     <div class="ctas rv">
       <a class="btn btn-gold" href="https://www.instagram.com/frostfall.game/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@frostfall.game</a>
       <button class="btn btn-ghost" id="watch2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span data-i="watch">Watch trailer</span></button>
@@ -261,7 +261,7 @@ footer a:hover{text-decoration:underline}
 
 <script>
 // Oyun Google Play'de herkese acilinca LIVE = true yap.
-const LIVE = false;
+const LIVE = true;
 const PLAY = 'https://play.google.com/store/apps/details?id=com.ardaedits.frostfall';
 
 const TR = {
@@ -281,7 +281,7 @@ const TR = {
   k3: 'Kahramanlar', h3: 'Kuzeyin kahramanlarıyla tanış',
   k4: 'Çok oyunculu', h4: 'Yalnız hayatta kalamazsın', s4: 'Bir ittifaka katıl, takımınla sohbet et ve Ebedi Ocak Kalesi için birlikte savaş.',
   c1: '⚔ İttifak savaşları', c2: '🏰 Ebedi Ocak Kalesi', c3: '🕳 Ortak Zindan', c4: '🏳 Eyalet Savaşı', c5: '🐾 Evcil hayvanlar', c6: '📅 Günlük etkinlikler',
-  h5: 'Ateşi canlı tutabilecek misin?', s5: 'Frostfall çıktığında ilk sen haberdar ol — bizi Instagram\'da takip et.',
+  h5: 'Ateşi canlı tutabilecek misin?', s5: 'Frostfall\'u Google Play\'den ücretsiz indir, haberler ve etkinlikler için bizi Instagram\'da takip et.',
   priv: 'Gizlilik Politikası', contact: 'İletişim', made: 'Yunanistan\'da tek başına çalışan bağımsız geliştirici Arda Suka tarafından yapıldı 🇬🇷'
 };
 const EN = {}; document.querySelectorAll('[data-i]').forEach(e => { EN[e.dataset.i] = e.innerHTML; });
